@@ -5,19 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Bonzas — Menú</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barrio&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f0d0b;
-    --surface: #1a1713;
-    --card: #211e1a;
-    --card-hover: #2a2620;
-    --border: #2e2a25;
-    --accent: #e8480a;
-    --accent2: #f5a623;
-    --text: #f0ebe4;
-    --text-muted: #8a7f74;
-    --text-dim: #5a524a;
+    --bg: #0a0a0f;
+    --surface: #12111a;
+    --card: #1a1825;
+    --card-hover: #221f30;
+    --border: #2a2640;
+    --accent: #cdfefe;
+    --accent2: #a374af;
+    --accent-glow: rgba(205,254,254,0.18);
+    --accent2-glow: rgba(163,116,175,0.22);
+    --text: #f0edf8;
+    --text-muted: #8a82a0;
+    --text-dim: #4a4560;
     --white: #ffffff;
     --nav-h: 52px;
     --radius: 12px;
@@ -28,7 +30,11 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image: url('imgs/fondo.png');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
     color: var(--text);
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
@@ -36,23 +42,27 @@
     overflow-x: hidden;
   }
 
+  /* Overlay oscuro sobre el fondo para que el contenido sea legible */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(10,10,15,0.82);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .header, .nav-sticky, .main, .footer { position: relative; z-index: 1; }
+
   /* ── HEADER ── */
   .header {
     position: relative;
     width: 100%;
-    padding: 28px 20px 20px;
+    padding: 36px 20px 24px;
     text-align: center;
-    background: linear-gradient(180deg, #000 0%, var(--bg) 100%);
+    background: linear-gradient(180deg, rgba(10,10,15,0.6) 0%, transparent 100%);
     overflow: hidden;
   }
-  .header-bg {
-    position: absolute; inset: 0;
-    background-image: url('imgs/fondo.png');
-    background-size: cover;
-    background-position: center top;
-    opacity: 0.18;
-    filter: blur(2px);
-  }
+  .header-bg { display: none; }
   .header-content { position: relative; z-index: 1; }
   .logo {
     width: 90px; height: 90px;
@@ -60,14 +70,15 @@
     border-radius: 50%;
     border: 2px solid var(--accent);
     margin-bottom: 10px;
-    box-shadow: 0 0 24px rgba(232,72,10,0.35);
+    box-shadow: 0 0 28px var(--accent-glow), 0 0 60px var(--accent-glow);
   }
   .header-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 38px;
-    letter-spacing: 4px;
-    color: var(--white);
+    font-family: 'Barrio', cursive;
+    font-size: 42px;
+    letter-spacing: 5px;
+    color: var(--accent);
     line-height: 1;
+    text-shadow: 0 0 20px var(--accent-glow);
   }
   .header-sub {
     font-size: 11px;
@@ -82,8 +93,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(15,13,11,0.96);
-    backdrop-filter: blur(10px);
+    background: rgba(10,10,15,0.92);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
   .nav-scroll {
@@ -110,9 +121,10 @@
     transition: all 0.2s;
   }
   .nav-btn.active {
-    background: var(--accent);
+    background: transparent;
     border-color: var(--accent);
-    color: var(--white);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
   }
   .nav-btn:active { opacity: 0.7; }
 
@@ -129,16 +141,16 @@
     padding: 0 4px;
   }
   .category-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barrio', cursive;
     font-size: 26px;
     letter-spacing: 2px;
-    color: var(--white);
+    color: var(--accent);
   }
   .category-line {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
-    opacity: 0.5;
+    background: linear-gradient(90deg, var(--accent2) 0%, transparent 100%);
+    opacity: 0.4;
   }
 
   /* ── GRID PRODUCTOS ── */
@@ -188,7 +200,7 @@
     padding: 10px 10px 12px;
   }
   .card-name {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barrio', cursive;
     font-size: 15px;
     letter-spacing: 1px;
     color: var(--text);
@@ -198,7 +210,7 @@
   .card-price {
     font-size: 13px;
     font-weight: 500;
-    color: var(--accent2);
+    color: var(--accent);
   }
 
   /* Categorías sin imagen (adicionales, bebidas simples) */
@@ -318,10 +330,10 @@
     flex: 1;
   }
   .modal-name {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Barrio', cursive;
     font-size: 28px;
     letter-spacing: 2px;
-    color: var(--white);
+    color: var(--accent);
     line-height: 1.1;
     margin-bottom: 4px;
   }
@@ -334,7 +346,7 @@
   .modal-price {
     font-size: 22px;
     font-weight: 500;
-    color: var(--accent);
+    color: var(--accent2);
     margin-bottom: 12px;
   }
   .modal-desc {
@@ -436,13 +448,13 @@
     bottom: 20px; right: 16px;
     width: 42px; height: 42px;
     border-radius: 50%;
-    background: var(--accent);
+    background: var(--accent2);
     border: none;
     color: var(--white);
     font-size: 18px;
     cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 16px rgba(232,72,10,0.4);
+    box-shadow: 0 4px 16px var(--accent2-glow);
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.25s, transform 0.25s;
@@ -609,7 +621,9 @@ function buildMenu() {
   main.innerHTML = '';
 
   CONFIG.categorias.forEach(cat => {
-    const productos = menuData.filter(p => p.Categoria === cat.id);
+    const productos = menuData
+      .filter(p => p.Categoria === cat.id)
+      .sort((a, b) => (a.PrecioNumerico || 0) - (b.PrecioNumerico || 0));
     if (productos.length === 0) return;
 
     const section = document.createElement('div');
@@ -678,7 +692,9 @@ function noImgHtml() {
 
 // ── MODAL ─────────────────────────────────────────────────────
 function openModal(catId, idx) {
-  const productos = menuData.filter(p => p.Categoria === catId);
+  const productos = menuData
+    .filter(p => p.Categoria === catId)
+    .sort((a, b) => (a.PrecioNumerico || 0) - (b.PrecioNumerico || 0));
   currentCategoryProducts = productos;
   currentProductIndex = idx;
   renderModal();
