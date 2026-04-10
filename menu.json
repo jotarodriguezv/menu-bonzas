@@ -1,0 +1,875 @@
+[
+  {
+    "Nombre": "PAPITAS MAGIC",
+    "Precio": "$ 16.000",
+    "Descripcion": "240 g de papas francesas bañadas en queso fundido y coronadas con mermelada de tocineta y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_entradas_papitasmagic.jpg",
+    "Categoria": "entradas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 16000
+  },
+  {
+    "Nombre": "CHORIZOS EMPANELADOS",
+    "Precio": "$ 16.000",
+    "Descripcion": "Chorizos artesanales en melado de panela, acompañados con papa criolla y queso rallado.",
+    "Imagen": "imgs/productos/bonza_entradas_chorizosempanelados.jpg",
+    "Categoria": "entradas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 16000
+  },
+  {
+    "Nombre": "NACHOS (con Birria)",
+    "Precio": "$ 20.000",
+    "Descripcion": "Crujientes nachos de maíz acompañados de guacamole, pico de gallo, jalapeños y queso rallado.",
+    "Imagen": "imgs/productos/bonza_entradas_nachos.jpg",
+    "Categoria": "entradas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 20000
+  },
+  {
+    "Nombre": "CEVICHE DE CHICHARRÓN",
+    "Precio": "$ 19.000",
+    "Descripcion": "Crujiente chicharrón con receta de ceviche peruano, acompañado con aguacate y bastones de platano verde.",
+    "Imagen": "imgs/productos/bonza_entradas_cecichechicharron.jpg",
+    "Categoria": "entradas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 19000
+  },
+  {
+    "Nombre": "TORTIBIRRAS",
+    "Precio": "$ 25.000",
+    "Descripcion": "3 tortillas de trigo rellenas de deliciosa birria mexicana, guacamole fresco y pequeños trozos de cebolla, cilantro y perejil. Acompañadas de caldo de birria mexicana.",
+    "Imagen": "imgs/productos/bonza_entradas_tortibirrias.jpg",
+    "Categoria": "entradas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 25000
+  },
+  {
+    "Nombre": "PECHUGA AL CARBÓN",
+    "Precio": "$ 33.000",
+    "Descripcion": "400g de pechuga asada al carbón con chimichurri argentino, acompañada con ensalada y papas a la francesa y queso rallado.",
+    "Imagen": "imgs/productos/bonza_parriladas_pechugaalcarbon.jpg",
+    "Categoria": "parrilladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 33000
+  },
+  {
+    "Nombre": "COSTILLAS DE CERDO",
+    "Precio": "$ 38.000",
+    "Descripcion": "350g de costilla de cerdo ahumada al barril, bañada en BBQ y chimichurri argentino; con ensalada y papas francesa con queso rallado.",
+    "Imagen": "imgs/productos/bonza_parrilladas_costillascerdo.jpg",
+    "Categoria": "parrilladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 38000
+  },
+  {
+    "Nombre": "PANCETA DE CERDO",
+    "Precio": "$ 38.000",
+    "Descripcion": "400g de panceta de cerdo ahumada al barril, acompañada con ensalada, guacamole y papa criolla con queso rallado.",
+    "Imagen": "imgs/productos/bonza_parrilladas_pancetacerdo.jpg",
+    "Categoria": "parrilladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 38000
+  },
+  {
+    "Nombre": "CHURRASCO",
+    "Precio": "$ 44.000",
+    "Descripcion": "400g de filete de churrasco asado al carbón con chimichurri argentino, acompañado con ensalada y papas a la francesa y queso rallado.",
+    "Imagen": "imgs/productos/bonza_parrilladas_churrasco.jpg",
+    "Categoria": "parrilladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 44000
+  },
+  {
+    "Nombre": "MIXTO",
+    "Precio": "$ 55.000",
+    "Descripcion": "Carne y pollo al carbón, chorizo parrillero, chorizo artesanal, maíz tierno, lechuga batavia, chicharrón al barril, papa criolla y papas a la francesa.",
+    "Imagen": "imgs/productos/bonza_parrilladas_mixto.jpg",
+    "Categoria": "parrilladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 55000
+  },
+  {
+    "Nombre": "BURGER CLÁSICA",
+    "Precio": "$ 22.000",
+    "Descripcion": "Pan brioche suave, carne Angus 180g al carbón, queso cheddar, tocineta, pepinillos y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_burgerclasica.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 22000
+  },
+  {
+    "Nombre": "BURGER CHICKEN",
+    "Precio": "$ 26.000",
+    "Descripcion": "Pan brioche suave, carne Angus 180g al carbón, pollo desmechado, queso cheddar, cebolla grillé y vegetales frescos",
+    "Imagen": "imgs/productos/bonza_burger_burgerchicken.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 26000
+  },
+  {
+    "Nombre": "RECARGADA",
+    "Precio": "$ 28.000",
+    "Descripcion": "Pan brioche suave , carne Angus 180g al carbón, pollo desmechado, queso cheddar, tocineta, huevo al sartén, cebolla grillé y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_recargada.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 28000
+  },
+  {
+    "Nombre": "LA CHULADA",
+    "Precio": "$ 30.000",
+    "Descripcion": "Pan brioche suave, tortilla artesanal dorada, jugosa birria mexicana, cremosa capa de guacamole, toque fresco de cebolla y cilantro, deliciosa carne de burger al carbón, fundido de queso cheddar y crujientes vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_lachulada.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "DOBLE BURGER",
+    "Precio": "$ 30.000",
+    "Descripcion": "Pan brioche suave, doble carne Angus 180g al carbón, doble queso cheddar, doble tocineta, pepinillos agridulces y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_dobleburger.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "MEXICANA",
+    "Precio": "$ 31.000",
+    "Descripcion": "Pan brioche suave, carne Angus 180g al carbón, carne desmechada, queso cheddar, tocineta, chorizo caramelizado, jalapeño, nachos de maiz y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_mexicana.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 31000
+  },
+  {
+    "Nombre": "LA INTRÉPIDA",
+    "Precio": "$ 33.000",
+    "Descripcion": "Pan brioche suave, carne 100% res al carbón, carne desmechada bañada en chimichurri argentino, panceta al barril crujiente y ahumada, queso de hoja fundido y ceviche de chicharrón ahumado.",
+    "Imagen": "imgs/productos/bonza_burger_laintrepida.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 33000
+  },
+  {
+    "Nombre": "RECERDA",
+    "Precio": "$ 33.000",
+    "Descripcion": "Pan brioche suave, carne Angus 180g al carbón,  papa ripio en mermelada de tocineta, queso cheddar, panceta de cerdo ahumada, aguacate y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_recerda.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 33000
+  },
+  {
+    "Nombre": "DON PORK",
+    "Precio": "$ 35.000",
+    "Descripcion": "Pan brioche suave, carne 100% res al carbón, carne  de cerdo desmechada, queso cheddar, tocineta ahumada, cebolla grille, vegetales frescos y chicharrón crujiente.",
+    "Imagen": "imgs/productos/bonza_burger_donpork.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 35000
+  },
+  {
+    "Nombre": "LA VOLKÁNICA",
+    "Precio": "$ 35.000",
+    "Descripcion": "Pan brioche suave, doble carne jugosa Angus al carbón, queso mozzarella y cheddar en un derretido brutal, jalapeño apanado crocante, pollo en salsa de ajo que se derrite en la boca, aguacate fresco para equilibrar y una salsa ahumada de chicharrón que explota en sabor.",
+    "Imagen": "imgs/productos/bonza_burger_lavolkanica.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 35000
+  },
+  {
+    "Nombre": "CRIOLLA",
+    "Precio": "$ 38.000",
+    "Descripcion": "Pan brioche suave, carne Angus 180g al carbón, pollo desmechado, queso cheddar, tocineta, chorizo caramelizado, cebolla grillé, maíz tierno y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_criolla.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 38000
+  },
+  {
+    "Nombre": "TRIPLE BURGER",
+    "Precio": "$ 44.000",
+    "Descripcion": "Pan brioche suave, triple carne Angus 180g al carbón, triple queso cheddar, triple tocineta, pepinillos agridulces y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_tripleburger.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 44000
+  },
+  {
+    "Nombre": "CRIOLLA 2.0",
+    "Precio": "$ 55.000",
+    "Descripcion": "Pan brioche suave, doble carne Angus 180g, carne de res, pechuga y cerdo desmechados, queso cheddar, doble tocineta, chorizo caramelizado, cebolla grillé, maíz tierno, chicharrón y vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_burger_criolla2.jpg",
+    "Categoria": "hamburguesas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 55000
+  },
+  {
+    "Nombre": "SALCHI CLÁSICO",
+    "Precio": "$ 22.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido y queso rallado con tocineta ahumada, lechuga batavia y salsas de la casa",
+    "Imagen": "imgs/productos/bonza_salchipapas_salchiclasico.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Salchicha americana)",
+    "PrecioNumerico": 22000
+  },
+  {
+    "Nombre": "CHORI CLÁSICO",
+    "Precio": "$ 24.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido y queso rallado con tocineta ahumada, lechuga batavia y salsas de la casa",
+    "Imagen": "imgs/productos/bonza_salchipapas_choriclasico.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Chorizo Santarrosano y chorizo artesanal caramelizado)",
+    "PrecioNumerico": 24000
+  },
+  {
+    "Nombre": "SALCHI CHICKEN",
+    "Precio": "$ 28.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido, pollo desmechado con maíz tierno, queso rallado con tocineta ahumada, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_salchichicken.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Salchicha americana)",
+    "PrecioNumerico": 28000
+  },
+  {
+    "Nombre": "CHORI CHICKEN",
+    "Precio": "$ 30.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido, pollo desmechado con maíz tierno, queso rallado con tocineta ahumada, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_chorichicken.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Chorizo Santarrosano y chorizo artesanal caramelizado)",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "SALCHI RES",
+    "Precio": "$ 28.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido, carne de res desmechada al barrill, queso rallado con tocineta ahumada, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_salchires.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Salchicha americana)",
+    "PrecioNumerico": 28000
+  },
+  {
+    "Nombre": "CHORI RES",
+    "Precio": "$ 30.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido, carne de res desmechada al barrill, queso rallado con tocineta ahumada, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_chorires.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Chorizo Santarrosano y chorizo artesanal caramelizado)",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "SALCHI PORKI",
+    "Precio": "$ 30.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido, cerdo desmechado y chicharrón crujiente al barrill, con queso rallado, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_salchiporki.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Salchicha americana)",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "CHORI PORKI",
+    "Precio": "$ 33.000",
+    "Descripcion": "240 gr de papa francesa y criolla, queso fundido, cerdo desmechado y chicharrón crujiente al barrill, con queso rallado, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_choriporki.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Chorizo Santarrosano y chorizo artesanal caramelizado)",
+    "PrecioNumerico": 33000
+  },
+  {
+    "Nombre": "SALCHI MONSTER",
+    "Precio": "$ 55.000",
+    "Descripcion": "480 gr de papa francesa y criolla, queso fundido, cerdo desmechado al barril, pollo desmechado con maíz tierno, queso rallado con topping de tocineta ahumada, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_salchimonster.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Salchicha americana)",
+    "PrecioNumerico": 55000
+  },
+  {
+    "Nombre": "CHORI MONSTER",
+    "Precio": "$ 55.000",
+    "Descripcion": "480 gr de papa francesa y criolla, queso fundido, cerdo desmechado al barril, pollo desmechado con maíz tierno, queso rallado con topping de tocineta ahumada, lechuga batavia y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_salchipapas_chorimonster.jpg",
+    "Categoria": "salchipapas",
+    "DescripcionAvanzada": "(Chorizo Santarrosano y chorizo artesanal caramelizado)",
+    "PrecioNumerico": 55000
+  },
+  {
+    "Nombre": "CHICKEN",
+    "Precio": "$ 24.000",
+    "Descripcion": "Pan artesanal, pollo desmechado, jamón y queso gratinado, vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_sandwich_chicken.jpg",
+    "Categoria": "sandwiches",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 24000
+  },
+  {
+    "Nombre": "RES",
+    "Precio": "$ 25.000",
+    "Descripcion": "Pan artesanal, carne de res desmechada al barril bañada en BBQ, jamón y queso gratinado, vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_sandwich_res.jpg",
+    "Categoria": "sandwiches",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 25000
+  },
+  {
+    "Nombre": "PORKY",
+    "Precio": "$ 26.000",
+    "Descripcion": "Pan artesanal, cerdo desmechado al barril bañado en BBQ, jamón y queso gratinado, vegetales frescos.",
+    "Imagen": "imgs/productos/bonza_sandwich_porky.jpg",
+    "Categoria": "sandwiches",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 26000
+  },
+  {
+    "Nombre": "NUGGETS",
+    "Precio": "$ 24.000",
+    "Descripcion": "6 nuggets de pollo bañados en miel con papas francesa con queso rallado y jugo hit de cajita.",
+    "Imagen": "imgs/productos/bonza_infantil_nuggets.jpg",
+    "Categoria": "infantil",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 24000
+  },
+  {
+    "Nombre": "MINI BURGER",
+    "Precio": "$ 24.000",
+    "Descripcion": "Mini burger con queso cheddar, nuggets de pollo y vegetales frescos, con papas francesa con queso rallado y jugo hit de cajita.",
+    "Imagen": "imgs/productos/bonza_infantil_miniburger.jpg",
+    "Categoria": "infantil",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 24000
+  },
+  {
+    "Nombre": "DOG GLÁSICO",
+    "Precio": "$ 22.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, salchicha americana, papa fosforito, queso fundido y tocineta ahumada.",
+    "Imagen": "imgs/productos/bonza_hotdogs_dogclasico.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 22000
+  },
+  {
+    "Nombre": "CHORIPERRO CLÁSICO",
+    "Precio": "$ 24.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, chorizo ​​artesanal, papa fosforito, queso fundido y tocineta ahumada.",
+    "Imagen": "imgs/productos/bonza_hotdogs_choriperroclasico.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 24000
+  },
+  {
+    "Nombre": "DOG RES",
+    "Precio": "$ 28.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, salchicha americana, carne de res desmechada al barril, papa fosforito, queso fundido y tocineta ahumada.",
+    "Imagen": "imgs/productos/bonza_hotdogs_dogres.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 28000
+  },
+  {
+    "Nombre": "CHORIPERRO RES",
+    "Precio": "$ 30.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, chorizo ​​artesanal, carne de res desmechada al barril, papa fosforito, queso fundido y tocineta ahumada.",
+    "Imagen": "imgs/productos/bonza_hotdogs_choriperrores.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "DOG CHICKEN",
+    "Precio": "$ 26.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, salchicha americana, pollo desmechado, papa fosforito, queso fundido y tocineta ahumada.",
+    "Imagen": "imgs/productos/bonza_hotdogs_dogchicken.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 26000
+  },
+  {
+    "Nombre": "CHORIPERRO CHICKEN",
+    "Precio": "$ 28.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, chorizo ​​artesanal, pollo desmechado, papa fosforito, queso fundido y tocineta ahumada.",
+    "Imagen": "imgs/productos/bonza_hotdogs_choriperrochicken.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 28000
+  },
+  {
+    "Nombre": "DOG PORKI",
+    "Precio": "$ 30.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, salchicha americana, carne de cerdo desmechada y chicharrón al barril, papa fosforito, queso fundido..",
+    "Imagen": "imgs/productos/bonza_hotdogs_dogporki.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "CHORIPERRO PORKI",
+    "Precio": "$ 33.000",
+    "Descripcion": "Pan brioche, cama de cebolla grillé, chorizo ​​artesanal, carne de cerdo desmechada y chicharrón al barril, papa fosforito, queso fundido..",
+    "Imagen": "imgs/productos/bonza_hotdogs_choriperroporki.jpg",
+    "Categoria": "hotdogs",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 33000
+  },
+  {
+    "Nombre": "CHICKEN",
+    "Precio": "$ 27.000",
+    "Descripcion": "200 gr de maíz tierno en queso fundido y crema de leche, pollo desmechado, chorizo artesanal, lechuga batavia y topping de tocineta ahumada. Acompañado de papa francesa con queso rallado y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_desgranados_chicken.jpg",
+    "Categoria": "desgranados",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 27000
+  },
+  {
+    "Nombre": "RES",
+    "Precio": "$ 28.000",
+    "Descripcion": "200gr de maíz tierno en queso fundido y crema de leche, carne de res desmechada al barril, chorizo artesanal, lechuga batavia y topping de tocineta ahumada. Acompañado de papa francesa con queso rallado y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_desgranados_res.jpg",
+    "Categoria": "desgranados",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 28000
+  },
+  {
+    "Nombre": "PORK",
+    "Precio": "$ 30.000",
+    "Descripcion": "200gr de maíz tierno en queso fundido y crema de leche, chicharrón y cerdo desmechado al barril, chorizo artesanal, lechuga batavia, acompañado de papa francesa con queso rallado y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_desgranados_pork.jpg",
+    "Categoria": "desgranados",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 30000
+  },
+  {
+    "Nombre": "MUSLOS DE POLLO x 4",
+    "Precio": "$ 26.000",
+    "Descripcion": "Apanados en panko y bañados en salsa a elección, acompañados con porción de papa a la francesa o criolla, con queso rallado y salsas de la casa.",
+    "Imagen": "",
+    "Categoria": "muslos",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 26000
+  },
+  {
+    "Nombre": "MUSLOS DE POLLO x 8",
+    "Precio": "$ 46.000",
+    "Descripcion": "Apanados en panko y bañados en salsa a elección, acompañados con porción de papa a la francesa o criolla, con queso rallado y salsas de la casa.",
+    "Imagen": "",
+    "Categoria": "muslos",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 46000
+  },
+  {
+    "Nombre": "MUSLOS DE POLLO x 12",
+    "Precio": "$ 66.000",
+    "Descripcion": "Apanados en panko y bañados en salsa a elección, acompañados con porción de papa a la francesa o criolla, con queso rallado y salsas de la casa.",
+    "Imagen": "",
+    "Categoria": "muslos",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 66000
+  },
+  {
+    "Nombre": "PEPITO",
+    "Precio": "$ 50.000",
+    "Descripcion": "Pan de 50cm, salchicha americana, mix de pollo y carne al carbón, carne de hamburguesa, jamón, tocineta ahumada, maíz tierno, cebolla grillé, queso fundido, papa fosforito, lechuga batavia, vegetales frescos, acompañado con papa francesa con queso rallado y salsas de la casa.",
+    "Imagen": "imgs/productos/bonza_pepito.png",
+    "Categoria": "pepito",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 50000
+  },
+  {
+    "Nombre": "CARNE DE BURGER",
+    "Precio": "$ 8.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "PORCIÓN DE PAPA",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "POLLO DESMECHADO",
+    "Precio": "$ 6.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 6000
+  },
+  {
+    "Nombre": "CERDO DESMECHADO",
+    "Precio": "$ 7.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 7000
+  },
+  {
+    "Nombre": "RES DESMECHADA",
+    "Precio": "$ 7.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 7000
+  },
+  {
+    "Nombre": "TOCINETA AHUMADA",
+    "Precio": "$ 3.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 3000
+  },
+  {
+    "Nombre": "SALCHICHA AMERICANA",
+    "Precio": "$ 7.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 7000
+  },
+  {
+    "Nombre": "QUESO FUNDIDO",
+    "Precio": "$ 4.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 4500
+  },
+  {
+    "Nombre": "PEPINILLOS",
+    "Precio": "$ 2.500",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 2500
+  },
+  {
+    "Nombre": "JALAPEÑO",
+    "Precio": "$ 2.500",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 2500
+  },
+  {
+    "Nombre": "CEBOLLA GRILLÉ",
+    "Precio": "$ 2.500",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 2500
+  },
+  {
+    "Nombre": "CHICHARRÓN",
+    "Precio": "$ 6.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 6000
+  },
+  {
+    "Nombre": "CHORIZO ARTESANAL",
+    "Precio": "$ 7.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "adicionales",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 7000
+  },
+  {
+    "Nombre": "JUGOS EN AGUA (500 ML)",
+    "Precio": "$ 8.000",
+    "Descripcion": "Piña, Mora, Uva, Fresa, Frutos rojos, Guanábana, Mango, Maracuyá, Tamarindo",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "JUGOS EN LECHE (500 ML)",
+    "Precio": "$ 10.000",
+    "Descripcion": "Piña, Mora, Uva, Fresa, Frutos rojos, Guanábana, Mango, Maracuyá, Tamarindo",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 10000
+  },
+  {
+    "Nombre": "LIMONADA NATURAL",
+    "Precio": "$ 8.000",
+    "Descripcion": "",
+    "Imagen": "imgs/productos/bonza_bebidas_limonada_limonadanatural.jpg",
+    "Categoria": "limonadas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "LIMONADA DE MARACUYÁ",
+    "Precio": "$ 8.000",
+    "Descripcion": "",
+    "Imagen": "imgs/productos/bonza_bebidas_limonada_limonadamaracuya.jpg",
+    "Categoria": "limonadas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "LIMONADA DE MANGO",
+    "Precio": "$ 8.000",
+    "Descripcion": "",
+    "Imagen": "imgs/productos/bonza_bebidas_limonada_limonadamango.jpg",
+    "Categoria": "limonadas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "LIMONADA DE HIERBABUENA",
+    "Precio": "$ 8.000",
+    "Descripcion": "",
+    "Imagen": "imgs/productos/bonza_bebidas_limonada_limonadahierbabuena.jpg",
+    "Categoria": "limonadas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "LIMONADA DE CEREZA",
+    "Precio": "$ 8.000",
+    "Descripcion": "",
+    "Imagen": "imgs/productos/bonza_bebidas_limonada_limonadacereza.jpg",
+    "Categoria": "limonadas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 8000
+  },
+  {
+    "Nombre": "LIMONADA DE COCO",
+    "Precio": "$ 10.000",
+    "Descripcion": "",
+    "Imagen": "imgs/productos/bonza_bebidas_limonada_limonadacoco.jpg",
+    "Categoria": "limonadas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 10000
+  },
+  {
+    "Nombre": "MICHELADA NATURAL",
+    "Precio": "$ 3.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "micheladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 3000
+  },
+  {
+    "Nombre": "MICHELADA DE MANGO",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "micheladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "MICHELADA DE CEREZA",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "micheladas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "GASEOSA PERSONAL",
+    "Precio": "$ 4.500",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 4500
+  },
+  {
+    "Nombre": "AGUA PERSONAL",
+    "Precio": "$ 3.500",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 3500
+  },
+  {
+    "Nombre": "SODA O GINGER",
+    "Precio": "$ 4.500",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 45000
+  },
+  {
+    "Nombre": "JUGO HIT CAJA",
+    "Precio": "$ 3.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 3000
+  },
+  {
+    "Nombre": "GASEOSA FAMILIAR 1.5 L",
+    "Precio": "$ 10.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "bebidas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 10000
+  },
+  {
+    "Nombre": "ÁGUILA",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "PÓKER",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "HEINEKEN (250 ML)",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "CORONITA",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "CLUB DORADA",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "TRES CORDILLERAS",
+    "Precio": "$ 5.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 5000
+  },
+  {
+    "Nombre": "CORONA",
+    "Precio": "$ 9.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 9000
+  },
+  {
+    "Nombre": "STELLA ARTOIS",
+    "Precio": "$ 9.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 9000
+  },
+  {
+    "Nombre": "HEINEKEN (330 ML)",
+    "Precio": "$ 9.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cervezas",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 9000
+  },
+  {
+    "Nombre": "MOJITO",
+    "Precio": "$ 20.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cocteles",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 20000
+  },
+  {
+    "Nombre": "CUBA LIBRE",
+    "Precio": "$ 20.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cocteles",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 20000
+  },
+  {
+    "Nombre": "MARGARITA",
+    "Precio": "$ 20.000",
+    "Descripcion": "",
+    "Imagen": "",
+    "Categoria": "cocteles",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 20000
+  },
+  {
+    "Nombre": "FUXION",
+    "Precio": "$ 26.000",
+    "Descripcion": "Birria intensa, ramen, huevos cocidos, cebolla larga, perejil, cilantro, camarones, chicharrón crujiente y aguacate.",
+    "Imagen": "imgs/productos/bonza_ramenbirria_fuxxion.jpg",
+    "Categoria": "ramenbirria",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 26000
+  },
+  {
+    "Nombre": "MEDIUM",
+    "Precio": "$ 23.000",
+    "Descripcion": "Base potente de birria, ramen, huevos cocidos, cebolla larga, perejil, cilantro, camarones y aguacate cremoso.",
+    "Imagen": "imgs/productos/bonza_ramenbirria_medium.jpg",
+    "Categoria": "ramenbirria",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 23000
+  },
+  {
+    "Nombre": "CLASSIC",
+    "Precio": "$ 20.000",
+    "Descripcion": "Caldo de birria profundo, birria jugosa, pasta ramen en su punto, huevos cocidos, cebolla larga en juliana, perejil, cilantro y aguacate fresco.",
+    "Imagen": "imgs/productos/bonza_ramenbirria_clasic.jpg",
+    "Categoria": "ramenbirria",
+    "DescripcionAvanzada": "",
+    "PrecioNumerico": 20000
+  }
+]

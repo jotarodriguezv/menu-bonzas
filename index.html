@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bonzas — Menú</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0d0b;
+    --surface: #1a1713;
+    --card: #211e1a;
+    --card-hover: #2a2620;
+    --border: #2e2a25;
+    --accent: #e8480a;
+    --accent2: #f5a623;
+    --text: #f0ebe4;
+    --text-muted: #8a7f74;
+    --text-dim: #5a524a;
+    --white: #ffffff;
+    --nav-h: 52px;
+    --radius: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    position: relative;
+    width: 100%;
+    padding: 28px 20px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #000 0%, var(--bg) 100%);
+    overflow: hidden;
+  }
+  .header-bg {
+    position: absolute; inset: 0;
+    background-image: url('imgs/fondo.png');
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.18;
+    filter: blur(2px);
+  }
+  .header-content { position: relative; z-index: 1; }
+  .logo {
+    width: 90px; height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    margin-bottom: 10px;
+    box-shadow: 0 0 24px rgba(232,72,10,0.35);
+  }
+  .header-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    letter-spacing: 4px;
+    color: var(--white);
+    line-height: 1;
+  }
+  .header-sub {
+    font-size: 11px;
+    color: var(--accent2);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ── NAV CATEGORÍAS ── */
+  .nav-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15,13,11,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 4px;
+    padding: 10px 12px;
+  }
+  .nav-scroll::-webkit-scrollbar { display: none; }
+  .nav-btn {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .nav-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+  }
+  .nav-btn:active { opacity: 0.7; }
+
+  /* ── CONTENIDO ── */
+  .main { padding: 0 12px 80px; }
+
+  /* ── SECCIÓN CATEGORÍA ── */
+  .category-section { margin-top: 28px; }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 0 4px;
+  }
+  .category-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+  .category-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+    opacity: 0.5;
+  }
+
+  /* ── GRID PRODUCTOS ── */
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* ── CARD PRODUCTO ── */
+  .product-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: transform 0.18s, border-color 0.18s;
+    position: relative;
+  }
+  .product-card:active { transform: scale(0.97); }
+  .product-card.has-img:hover { border-color: var(--accent); }
+
+  .card-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--surface);
+    overflow: hidden;
+  }
+  .card-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .product-card:active .card-img { transform: scale(1.04); }
+
+  .no-img-placeholder {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--surface), var(--card-hover));
+  }
+  .no-img-placeholder svg { opacity: 0.2; }
+
+  .card-body {
+    padding: 10px 10px 12px;
+  }
+  .card-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .card-price {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent2);
+  }
+
+  /* Categorías sin imagen (adicionales, bebidas simples) */
+  .products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .list-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+  .list-item:last-child { border-radius: 0 0 var(--radius) var(--radius); }
+  .list-name { font-size: 13px; color: var(--text); flex: 1; }
+  .list-price { font-size: 13px; color: var(--accent2); font-weight: 500; white-space: nowrap; }
+
+  /* ── MODAL PRODUCTO ── */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 500;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+  }
+  .modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal-sheet {
+    width: 100%;
+    max-height: 88vh;
+    background: var(--surface);
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.32,0.72,0,1);
+  }
+  .modal-overlay.open .modal-sheet {
+    transform: translateY(0);
+  }
+
+  .modal-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--card);
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  .modal-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .modal-img-wrap:active .modal-img { transform: scale(1.03); }
+
+  .modal-no-img {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--card), var(--card-hover));
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+  }
+
+  /* flechas nav dentro del modal */
+  .modal-nav {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px;
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    transition: background 0.2s;
+  }
+  .modal-nav:active { background: rgba(232,72,10,0.7); }
+  .modal-nav-prev { left: 10px; }
+  .modal-nav-next { right: 10px; }
+
+  .modal-body {
+    padding: 18px 20px 28px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .modal-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .modal-desc-avanzada {
+    font-size: 11px;
+    color: var(--accent2);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .modal-price {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .modal-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+  .modal-counter {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .lightbox.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ── PROMO MODAL ── */
+  .promo-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s;
+  }
+  .promo-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .promo-box {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    transform: scale(0.88);
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .promo-overlay.open .promo-box { transform: scale(1); }
+  .promo-img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+  }
+  .promo-close {
+    position: absolute;
+    top: -14px; right: -14px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(232,72,10,0.5);
+  }
+
+  /* ── SCROLL TO TOP ── */
+  .scroll-top {
+    position: fixed;
+    bottom: 20px; right: 16px;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(232,72,10,0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 200;
+  }
+  .scroll-top.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+  }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 600px) {
+    .main { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+    .products-grid { grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .modal-sheet { max-width: 480px; margin: 0 auto; border-radius: 20px; }
+    .modal-overlay { align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-bg"></div>
+  <div class="header-content">
+    <img src="imgs/logo.png" alt="Bonzas" class="logo" onerror="this.style.display='none'">
+    <div class="header-title">BONZAS</div>
+    <div class="header-sub">Carta Digital · 2026</div>
+  </div>
+</div>
+
+<!-- NAV CATEGORÍAS -->
+<nav class="nav-sticky">
+  <div class="nav-scroll" id="navScroll"></div>
+</nav>
+
+<!-- MAIN -->
+<main class="main" id="mainContent"></main>
+
+<!-- FOOTER -->
+<div class="footer">© 2026 BONZAS · Todos los derechos reservados</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- MODAL PRODUCTO -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal-sheet" id="modalSheet">
+    <div class="modal-img-wrap" id="modalImgWrap">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      <button class="modal-nav modal-nav-prev" id="modalPrev" onclick="navigateModal(-1)">‹</button>
+      <button class="modal-nav modal-nav-next" id="modalNext" onclick="navigateModal(1)">›</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-desc-avanzada" id="modalDescAvanzada"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-counter" id="modalCounter"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- PROMO MODAL -->
+<div class="promo-overlay" id="promoOverlay">
+  <div class="promo-box">
+    <img src="imgs/promo.png" alt="Promoción" class="promo-img" onerror="closePromo()">
+    <button class="promo-close" onclick="closePromo()">✕</button>
+  </div>
+</div>
+
+<script>
+// ── CONFIGURACIÓN ──────────────────────────────────────────────
+const CONFIG = {
+  restaurante: "Bonzas",
+  promo: {
+    activa: true,          // cambia a false para desactivar la promo
+    imagen: "imgs/promo.png"
+  },
+  // Orden y etiquetas de las categorías
+  categorias: [
+    { id: "hamburguesas",  label: "🍔 Hamburguesas" },
+    { id: "hotdogs",       label: "🌭 Hot Dogs" },
+    { id: "salchipapas",   label: "🍟 Salchipapas" },
+    { id: "parrilladas",   label: "🔥 Parrilladas" },
+    { id: "desgranados",   label: "🌽 Desgranados" },
+    { id: "sandwiches",    label: "🥪 Sándwiches" },
+    { id: "muslos",        label: "🍗 Muslitos" },
+    { id: "pepito",        label: "🥖 Pepito" },
+    { id: "ramenbirria",   label: "🍜 Ramen Birria" },
+    { id: "infantil",      label: "🧒 Infantil" },
+    { id: "entradas",      label: "🥗 Entradas" },
+    { id: "bebidas",       label: "🥤 Bebidas" },
+    { id: "limonadas",     label: "🍋 Limonadas" },
+    { id: "micheladas",    label: "🍺 Micheladas" },
+    { id: "cervezas",      label: "🍻 Cervezas" },
+    { id: "cocteles",      label: "🍹 Cocteles" },
+    { id: "adicionales",   label: "➕ Adicionales" },
+  ],
+  // Categorías que se muestran como lista (sin grid de fotos)
+  sinFotos: ["adicionales", "bebidas", "micheladas", "cervezas", "cocteles", "muslos"]
+};
+
+// ── DATOS DEL MENÚ (inline - reemplaza el fetch) ───────────────
+// Estos datos vienen de tu menu.json. En producción puedes hacer fetch('menu.json')
+// y reemplazar esta variable. Aquí los incluimos inline para funcionar sin servidor local.
+
+let menuData = [];
+
+// ── ESTADO ────────────────────────────────────────────────────
+let currentCategoryProducts = [];
+let currentProductIndex = 0;
+
+// ── INIT ──────────────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch('menu.json');
+    menuData = await res.json();
+  } catch(e) {
+    console.warn('menu.json no encontrado, usando datos de ejemplo');
+    menuData = [];
+  }
+  buildNav();
+  buildMenu();
+  initScrollSpy();
+  initScrollTop();
+  if (CONFIG.promo.activa) {
+    setTimeout(() => openPromo(), 600);
+  }
+}
+
+// ── CONSTRUIR NAV ─────────────────────────────────────────────
+function buildNav() {
+  const nav = document.getElementById('navScroll');
+  CONFIG.categorias.forEach((cat, i) => {
+    const productos = menuData.filter(p => p.Categoria === cat.id);
+    if (productos.length === 0) return;
+    const btn = document.createElement('button');
+    btn.className = 'nav-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = cat.label;
+    btn.dataset.cat = cat.id;
+    btn.onclick = () => {
+      document.getElementById('sec-' + cat.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    nav.appendChild(btn);
+  });
+}
+
+// ── CONSTRUIR MENÚ ────────────────────────────────────────────
+function buildMenu() {
+  const main = document.getElementById('mainContent');
+  main.innerHTML = '';
+
+  CONFIG.categorias.forEach(cat => {
+    const productos = menuData.filter(p => p.Categoria === cat.id);
+    if (productos.length === 0) return;
+
+    const section = document.createElement('div');
+    section.className = 'category-section';
+    section.id = 'sec-' + cat.id;
+
+    // Header
+    section.innerHTML = `
+      <div class="category-header">
+        <div class="category-title">${cat.label}</div>
+        <div class="category-line"></div>
+      </div>
+    `;
+
+    if (CONFIG.sinFotos.includes(cat.id)) {
+      // Lista simple
+      const list = document.createElement('div');
+      list.className = 'products-list';
+      productos.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'list-item';
+        item.innerHTML = `
+          <span class="list-name">${p.Nombre}${p.DescripcionAvanzada ? ' <span style="color:var(--text-dim);font-size:11px">' + p.DescripcionAvanzada + '</span>' : ''}</span>
+          <span class="list-price">${p.Precio}</span>
+        `;
+        list.appendChild(item);
+      });
+      section.appendChild(list);
+    } else {
+      // Grid con fotos
+      const grid = document.createElement('div');
+      grid.className = 'products-grid';
+      productos.forEach((p, idx) => {
+        const card = document.createElement('div');
+        card.className = 'product-card' + (p.Imagen ? ' has-img' : '');
+        card.onclick = () => openModal(cat.id, idx);
+
+        const imgHtml = p.Imagen
+          ? `<img class="card-img" src="${p.Imagen}" alt="${p.Nombre}" loading="lazy" onerror="this.parentNode.innerHTML=noImgHtml()">`
+          : noImgHtml();
+
+        card.innerHTML = `
+          <div class="card-img-wrap">${imgHtml}</div>
+          <div class="card-body">
+            <div class="card-name">${p.Nombre}</div>
+            <div class="card-price">${p.Precio}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      section.appendChild(grid);
+    }
+
+    main.appendChild(section);
+  });
+}
+
+function noImgHtml() {
+  return `<div class="no-img-placeholder">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+      <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+      <polyline points="21,15 16,10 5,21"/>
+    </svg>
+  </div>`;
+}
+
+// ── MODAL ─────────────────────────────────────────────────────
+function openModal(catId, idx) {
+  const productos = menuData.filter(p => p.Categoria === catId);
+  currentCategoryProducts = productos;
+  currentProductIndex = idx;
+  renderModal();
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderModal() {
+  const p = currentCategoryProducts[currentProductIndex];
+  const wrap = document.getElementById('modalImgWrap');
+
+  // Limpiar img anterior (mantener botones)
+  const oldImg = wrap.querySelector('.modal-img, .modal-no-img');
+  if (oldImg) oldImg.remove();
+
+  if (p.Imagen) {
+    const img = document.createElement('img');
+    img.className = 'modal-img';
+    img.src = p.Imagen;
+    img.alt = p.Nombre;
+    img.onclick = () => openLightbox(p.Imagen);
+    img.onerror = () => { img.remove(); wrap.insertAdjacentHTML('afterbegin', '<div class="modal-no-img">' + noImgHtml() + '</div>'); };
+    wrap.insertAdjacentElement('afterbegin', img);
+  } else {
+    wrap.insertAdjacentHTML('afterbegin', '<div class="modal-no-img">' + noImgHtml() + '</div>');
+  }
+
+  document.getElementById('modalName').textContent = p.Nombre;
+  document.getElementById('modalPrice').textContent = p.Precio;
+  document.getElementById('modalDesc').textContent = p.Descripcion || '';
+  const da = document.getElementById('modalDescAvanzada');
+  da.textContent = p.DescripcionAvanzada || '';
+  da.style.display = p.DescripcionAvanzada ? 'block' : 'none';
+
+  const total = currentCategoryProducts.length;
+  document.getElementById('modalCounter').textContent = `${currentProductIndex + 1} / ${total}`;
+  document.getElementById('modalPrev').style.opacity = currentProductIndex === 0 ? '0.3' : '1';
+  document.getElementById('modalNext').style.opacity = currentProductIndex === total - 1 ? '0.3' : '1';
+}
+
+function navigateModal(dir) {
+  const next = currentProductIndex + dir;
+  if (next < 0 || next >= currentCategoryProducts.length) return;
+  currentProductIndex = next;
+  renderModal();
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+// Swipe en el modal
+let touchStartX = 0;
+document.getElementById('modalSheet').addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+document.getElementById('modalSheet').addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) navigateModal(diff > 0 ? 1 : -1);
+});
+
+// ── LIGHTBOX ──────────────────────────────────────────────────
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// ── PROMO ─────────────────────────────────────────────────────
+function openPromo() {
+  document.getElementById('promoOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePromo() {
+  document.getElementById('promoOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── SCROLL SPY ────────────────────────────────────────────────
+function initScrollSpy() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const catId = entry.target.id.replace('sec-', '');
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.cat === catId);
+        });
+        // scroll la nav para que el btn activo sea visible
+        const activeBtn = document.querySelector(`.nav-btn[data-cat="${catId}"]`);
+        activeBtn?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  document.querySelectorAll('.category-section').forEach(sec => observer.observe(sec));
+}
+
+// ── SCROLL TOP ────────────────────────────────────────────────
+function initScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+}
+
+// ── TECLADO ───────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key === 'Escape') closeLightbox();
+    return;
+  }
+  if (document.getElementById('modalOverlay').classList.contains('open')) {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowRight') navigateModal(1);
+    if (e.key === 'ArrowLeft') navigateModal(-1);
+  }
+  if (document.getElementById('promoOverlay').classList.contains('open')) {
+    if (e.key === 'Escape') closePromo();
+  }
+});
+
+// ── ARRANCAR ──────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
