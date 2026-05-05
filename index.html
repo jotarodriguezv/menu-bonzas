@@ -571,6 +571,18 @@ async function init() {
     if (!restData.length) throw new Error('Restaurante no encontrado');
     restaurante = restData[0];
 
+    // Verificar si el restaurante está activo
+    if (restaurante.activo === false) {
+      showLoading(false);
+      document.getElementById('mainContent').innerHTML = `
+        <div style="text-align:center;padding:80px 20px;">
+          <div style="font-size:48px;margin-bottom:16px;">🔒</div>
+          <div style="font-family:'Barrio',cursive;font-size:24px;color:var(--accent);margin-bottom:8px;">Servicio no disponible</div>
+          <div style="font-size:14px;color:var(--text-muted)">Este menú no está disponible en este momento.</div>
+        </div>`;
+      return;
+    }
+
     document.documentElement.style.setProperty('--accent',  restaurante.color_primario  || '#cdfefe');
     document.documentElement.style.setProperty('--accent2', restaurante.color_secundario || '#a374af');
 
